@@ -57,6 +57,13 @@ a { color: var(--color-primary); }
 }
 .topbar a { color: #fff; text-decoration: none; }
 .topbar a:hover { text-decoration: underline; }
+.lang-switch a {
+  border: 1px solid rgba(255,255,255,0.45);
+  padding: 2px 12px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+.lang-switch a:hover { background: rgba(255,255,255,0.15); text-decoration: none; }
 
 /* ---------- Header / nav ---------- */
 header.site-header {
