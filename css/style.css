@@ -143,7 +143,14 @@ nav.main-nav a[aria-current="page"] {
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
   color: #fff;
   padding: 56px 0;
+  overflow: hidden;
 }
+.hero .container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.hero-text { flex: 1 1 380px; }
 .hero h2 {
   font-size: 2rem;
   margin: 0 0 12px;
@@ -154,6 +161,14 @@ nav.main-nav a[aria-current="page"] {
   font-size: 1.05rem;
 }
 .hero .btn { margin-top: 18px; }
+.hero-illustration {
+  flex: 0 0 320px;
+  max-width: 320px;
+}
+.hero-illustration svg { width: 100%; height: auto; display: block; }
+@media (max-width: 860px) {
+  .hero-illustration { display: none; }
+}
 
 /* ---------- Buttons ---------- */
 .btn {
@@ -199,6 +214,18 @@ p.section-sub {
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
   padding: 22px;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+.card:hover {
+  box-shadow: 0 6px 20px rgba(11, 61, 145, 0.10);
+  transform: translateY(-2px);
+}
+.stat-grid .stat {
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+.stat-grid .stat:hover {
+  box-shadow: 0 6px 20px rgba(11, 61, 145, 0.10);
+  transform: translateY(-2px);
 }
 .card h3 {
   margin-top: 0;
@@ -206,6 +233,7 @@ p.section-sub {
   font-size: 1.05rem;
 }
 .card .icon { font-size: 1.8rem; margin-bottom: 8px; }
+.card .icon svg { width: 56px; height: 56px; display: block; }
 
 .stat-grid {
   display: grid;
@@ -293,6 +321,17 @@ table.plain th {
   padding: 8px 10px;
   color: var(--color-text-muted);
 }
+.gallery-grid figure.placeholder-card {
+  border: 2px dashed var(--color-border);
+  background: var(--color-bg-soft);
+}
+.placeholder-visual {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.placeholder-visual svg { width: 60px; height: 60px; opacity: 0.55; }
 
 /* ---------- Contact ---------- */
 .contact-grid {
